@@ -1,0 +1,7 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    InspiredMinds\ContaoCrawlerAuthenticator\:
+        resource: ../src

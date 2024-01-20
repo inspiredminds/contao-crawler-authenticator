@@ -1,0 +1,56 @@
+{
+    "name": "inspiredminds/contao-crawler-authenticator",
+    "description": "Allows the Contao Crawler to be logged in as a front end member via Basic Authentication in order to index protected pages.",
+    "type": "contao-bundle",
+    "license": "LGPL-3.0-or-later",
+    "homepage": "https://github.com/inspiredminds/contao-crawler-authenticator",
+    "authors": [
+        {
+            "name": "Fritz Michael Gschwantner",
+            "email": "fmg@inspiredminds.at",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/inspiredminds/contao-crawler-authenticator/issues",
+        "source": "https://github.com/inspiredminds/contao-crawler-authenticator",
+        "forum": "https://community.contao.org/de"
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/fritzmg"
+        }
+    ],
+    "require": {
+        "php": ">=8.2",
+        "contao/core-bundle": "^4.13",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/http-foundation": "^5.4",
+        "symfony/http-kernel": "^5.4",
+        "symfony/password-hasher": "^5.4",
+        "symfony/security-core": "^5.4",
+        "symfony/security-guard": "^5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "InspiredMinds\\ContaoCrawlerAuthenticator\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "InspiredMinds\\ContaoCrawlerAuthenticator\\ContaoManager\\Plugin"
+    },
+    "require-dev": {
+        "contao/easy-coding-standard": "^6.0",
+        "contao/rector": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": false,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "contao-community-alliance/composer-plugin": true
+        }
+    }
+}
