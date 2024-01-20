@@ -23,5 +23,5 @@ Allows the Contao Crawler to be logged in as a front end member via Basic Authen
         ```
         These will then get used automatically every time you execute `contao:crawl` (unless overridden by the former command).
 
-_Note:_ be aware that the member's password _unencrypted_ will put into the bash history in the former case while the 
-and into the `.env.local` in the latter case.
+_Note:_ be aware that the member's password will be put _unencrypted_ into the bash history in the former case and into 
+the `.env.local` in the latter case.
