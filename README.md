@@ -9,8 +9,8 @@ Allows the Contao Crawler to be logged in as a front end member via Basic Authen
 ## Usage
 
 1. Install the extension (zero configuration necessary in the Contao Managed Edition).
-2. Create a front end member specifically for the Contao Crawler.
-3. Assign the new member to the appropriate member groups.
+2. Create a front end member specifically for the Contao Crawler or re-use an existing one where you know the password.
+3. Assign the member to the appropriate member groups.
 4. Now choose one of the following options (replace `<username>` and `<password>` with the member's credentials):
     * Pass the member's username and password for every `contao:crawl` execution:
         ```
