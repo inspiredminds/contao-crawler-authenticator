@@ -60,7 +60,7 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
                 }
             }
 
-            if (!$hasAuthBasic) {
+            if (!$hasIndexProtected) {
                 $extensionConfigs[] = [
                     'search' => [
                         'index_protected' => true,
@@ -68,7 +68,7 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
                 ];
             }
 
-            if (!$hasIndexProtected) {
+            if (!$hasAuthBasic) {
                 $extensionConfigs[] = [
                     'crawl' => [
                         'default_http_client_options' => [
