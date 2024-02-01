@@ -35,7 +35,7 @@ class AddVaryListener
         $response = $event->getResponse();
 
         // Do not modify headers, if this response cannot be cached anyway
-        if (!$response->isCacheable() || $response->headers->hasCacheControlDirective('private')) {
+        if (!$response->isCacheable()) {
             return;
         }
 
