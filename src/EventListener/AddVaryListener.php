@@ -40,7 +40,7 @@ class AddVaryListener
         }
 
         // Do not add Vary if a page is associated with this request and 'alwaysLoadFromCache' is enabled
-        if (($page = $this->getPageModel($event->getRequest())) && $page->alwaysLoadFromCache) {
+        if (($page = $this->getPageModel($event->getRequest())) && $page->cache && $page->alwaysLoadFromCache) {
             return;
         }
 
