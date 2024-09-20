@@ -74,9 +74,7 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
                     ],
                 ];
 
-                if (!isset($_SERVER['CRAWLER_AUTH'])) {
-                    $container->setParameter('env(CRAWLER_AUTH)', '');
-                }
+                $container->setParameter('env(CRAWLER_AUTH)', '');
             }
         }
 

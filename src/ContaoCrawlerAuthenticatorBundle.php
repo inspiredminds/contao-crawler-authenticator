@@ -10,12 +10,14 @@ declare(strict_types=1);
 
 namespace InspiredMinds\ContaoCrawlerAuthenticator;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class ContaoCrawlerAuthenticatorBundle extends Bundle
+class ContaoCrawlerAuthenticatorBundle extends AbstractBundle
 {
-    public function getPath(): string
+    public function loadExtension(array $config, ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
     {
-        return \dirname(__DIR__);
+        $containerConfigurator->import('../config/services.yaml');
     }
 }

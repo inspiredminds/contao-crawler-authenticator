@@ -25,8 +25,8 @@
     "require": {
         "php": ">=8.2",
         "contao/core-bundle": "^5.3",
-        "symfony/config": "^6.4 || ^7.1",
         "symfony/dependency-injection": "^6.4 || ^7.1",
+        "symfony/event-dispatcher": "^6.4 || ^7.1",
         "symfony/http-foundation": "^6.4 || ^7.1",
         "symfony/http-kernel": "^6.4 || ^7.1",
         "symfony/password-hasher": "^6.4 || ^7.1",

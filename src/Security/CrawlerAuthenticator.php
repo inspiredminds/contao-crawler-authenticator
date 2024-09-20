@@ -16,7 +16,7 @@ use Symfony\Component\Security\Http\Authenticator\Passport\Badge\UserBadge;
 use Symfony\Component\Security\Http\Authenticator\Passport\Passport;
 use Symfony\Component\Security\Http\Authenticator\Passport\SelfValidatingPassport;
 
-class CrawlerAuthenticator implements AbstractAuthenticator
+class CrawlerAuthenticator extends AbstractAuthenticator
 {
     public function __construct(
         private readonly ContaoUserProvider $contaoUserProvider,
