@@ -2,6 +2,8 @@ services:
     _defaults:
         autoconfigure: true
         autowire: true
+        bind:
+            $contaoUserProvider: '@contao.security.frontend_user_provider'
 
     InspiredMinds\ContaoCrawlerAuthenticator\:
         resource: ../src

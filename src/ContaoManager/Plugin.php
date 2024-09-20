@@ -33,15 +33,12 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
     {
         if ('security' === $extensionName) {
             foreach ($extensionConfigs as &$extensionConfig) {
-                if (isset($extensionConfig['firewalls']['contao_frontend']['guard'])) {
-                    $extensionConfig['firewalls']['contao_frontend']['guard']['entry_point'] = CrawlerAuthenticator::class;
-                }
-
                 if (isset($extensionConfig['firewalls']['contao_frontend'])) {
-                    $extensionConfig['firewalls']['contao_frontend']['anonymous'] = 'lazy';
-                    $extensionConfig['firewalls']['contao_frontend']['guard']['authenticators'][] = CrawlerAuthenticator::class;
+                    $extensionConfig['firewalls']['contao_frontend']['custom_authenticators'][] = CrawlerAuthenticator::class;
                 }
             }
+
+            $extensionConfigs[] = ['enable_authenticator_manager' => true];
         } elseif ('contao' === $extensionName) {
             $hasAuthBasic = false;
             $hasIndexProtected = false;
@@ -77,9 +74,7 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
                     ],
                 ];
 
-                if (!isset($_SERVER['CRAWLER_AUTH'])) {
-                    $container->setParameter('env(CRAWLER_AUTH)', '');
-                }
+                $container->setParameter('env(CRAWLER_AUTH)', '');
             }
         }
 
