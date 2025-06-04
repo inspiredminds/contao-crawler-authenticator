@@ -37,8 +37,6 @@ class Plugin implements BundlePluginInterface, ExtensionPluginInterface
                     $extensionConfig['firewalls']['contao_frontend']['custom_authenticators'][] = CrawlerAuthenticator::class;
                 }
             }
-
-            $extensionConfigs[] = ['enable_authenticator_manager' => true];
         } elseif ('contao' === $extensionName) {
             $hasAuthBasic = false;
             $hasIndexProtected = false;
