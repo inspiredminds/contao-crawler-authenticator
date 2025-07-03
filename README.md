@@ -4,7 +4,7 @@
 Contao Crawler Authenticator
 ============================
 
-Allows the Contao Crawler to be logged in as a front end member via Basic Authentication in Contao **4.13** in order to index protected pages.
+Allows the Contao Crawler to be logged in as a front end member via Basic Authentication in order to index protected pages.
 
 ## Usage
 
